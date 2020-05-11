@@ -71,4 +71,6 @@ app.get("/rss", async (req, res) => {
   res.send({ data: feed });
 });
 
+const port = process.env.PORT || 3000;
+
 app.listen(3000);
