@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon main.js",
-    "build": "npm run build"
+    "dev": "parcel main.js",
+    "build": "parcel build main.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +19,8 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.3",
     "rss-parser": "^3.8.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
