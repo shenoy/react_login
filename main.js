@@ -1,4 +1,5 @@
 const express = require("express");
+const Parser = require("rss-parser");
 
 const app = express();
 
@@ -30,9 +31,6 @@ db.connect(function (err) {
   }
 });
 
-
-
-
 const sessionStore = new MySQLStore(
   {
     expiration: 1825 * 86400 * 1000,
@@ -63,6 +61,14 @@ app.get("/", function (req, res) {
 
 app.get("/signup", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
+app.get("/rss", async (req, res) => {
+  console.log(req);
+  const parser = new Parser();
+  const feed = await parser.parseURL("http://feeds.bbci.co.uk/news/rss.xml");
+  console.log(feed, "feed at backend");
+  res.send({ data: feed });
 });
 
 app.listen(3000);
