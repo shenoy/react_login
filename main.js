@@ -1,5 +1,6 @@
 const express = require("express");
 const Parser = require("rss-parser");
+const cors = require("cors")({ origin: true });
 
 const app = express();
 
