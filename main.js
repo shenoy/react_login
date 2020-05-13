@@ -19,9 +19,10 @@ app.use(express.static(path.join(__dirname, "build")));
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  database: "myapp",
+  host: "sql2.freemysqlhosting.net",
+  user: "sql2339567",
+  password: "xB2!dD8%",
+  database: "sql2339567",
 });
 
 db.connect(function (err) {

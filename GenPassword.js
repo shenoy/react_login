@@ -1,5 +1,5 @@
 // const bcrypt = require("bcrypt");
 
-// let pswrd = bcrypt.hashSync("value2", 9);
+// let pswrd = bcrypt.hashSync("john", 9);
 
 // console.log(pswrd);

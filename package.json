@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon main.js",
     "dev": "parcel main.js",
-    "build": "parcel build main.js"
+    "build": "cd frontend && npm run build && mv build ../"
   },
   "author": "",
   "license": "ISC",
